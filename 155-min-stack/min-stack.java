@@ -53,7 +53,7 @@ class MinStack {
         int mini = stack.peek();
         while(!stack.isEmpty()){
             mini = Math.min(mini,stack.peek());
-            temp.push(stack.peek());
+            temp.push(stack.pop());
         }
         while(!temp.isEmpty()){
             stack.push(temp.pop());

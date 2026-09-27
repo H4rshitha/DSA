@@ -6,7 +6,7 @@ class Solution {
             pair[i][0]=position[i] ;
             pair[i][1]=speed[i] ;
         }
-        Arrays.sort(pair,(a,b)-> Integer.compare(b[0],a[0]));
+        Arrays.sort(pair,(a,b)-> b[0]-a[0]);
         Stack<Double> stack = new Stack<>();
         for(int[] thing : pair){ 
             stack.push((double)(target - thing[0])/thing[1]);
